@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>English Learning Web App ……</title>
+  <style type="text/css">
+
+@font-face {
+    font-family: 'ciclefina';
+    src: url('images/cicle-webfont.woff2') format('woff2'),
+	     url('images/cicle-webfont.woff') format('woff'),
+         url('images/ciclefina-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'zantroke';
+    src: url('images/zantroke-webfont.woff2') format('woff2'),
+	     url('images/zantroke-webfont.woff') format('woff'),
+         url('images/zantroke-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;/*  */
+} 
+
+    html,body{
+		margin:0 ;
+		/*	font-size:页面打开时，由用户端的window.innerWidth属性决定*/
+		padding: 0;
+		}
+	
+	html{
+	 font-family:"Helvetica","Arial";
+	 height: 100%;
+	}
+	header{
+		background-color: rosybrown;
+		height: 180px;
+		text-align:center;
+		background-image: url(images/top.png);
+		background-size: 100%;
+	}
+	header h1{
+		margin:0 auto;
+		padding:5px;
+		font-size:1.8em;
+		letter-spacing:0.2em;
+	}
+	header .logo{
+		display: inline-block;
+		width: 150px;
+		height: 48px;
+		background-image: url(images/myLogo.png);
+		background-size: 100%;
+		
+	}
+	header h1 .title{
+		color: white;
+		position: relative;
+		font-size:0.7em;
+		top:-12px;
+	}
+	nav{
+	height:40px;
+	margin:10px auto;
+	}
+	nav .button{
+	 font-size: 1.8em;
+	 border:3px outset   ;
+	 background-color:darkgray;
+	 border-radius: 15% ;
+	 padding: 0.1em ;
+	 color:rgb(255,255,255) ;
+	 cursor: pointer;
+	 }
+	 nav .button:hover{
+	  background-color:black;
+	 }
+	/*搜索框css*/
+	.box{
+		margin: 10px;
+	}
+	.box input{
+		position: relative;
+		display: inline-block;
+		font-size: 15px;
+		box-sizing: border-box;
+		transition: 0.5s;
+	}
+	.box input[type="text"]{
+		width: 300px;
+		height: 40px;
+		border: none;
+		outline: none; 
+		padding: 0 25px;
+		border-radius: 25px 0 0 25px;
+		margin-top: 1px;
+	}
+	.box input[type="button"]{
+		position: relative;
+		left: -5px;
+		border-radius: 0 25px 25px 0;
+		width: 80px;
+		height: 40px;
+		outline: none;
+		border: none;
+		cursor: pointer;
+		margin-right: 0px;
+	}
+	.box input[type="button"]:hover{
+		background: darkgray;
+	}
+	/*搜索框css*/
+	/* 以上是头部css */
+	
+	
+	section{
+	 display: flex ;
+	}
+	article{
+	 font-family: 'ciclefina' , '黑体';
+	 border:1px solid black;
+	 padding:5px;
+	 text-align:justify;
+	 line-height:1.5;
+	 color:black;
+	 background-color:darkgray;
+	}
+	article#help{
+	 flex: 2 ;
+	}
+	article#word{
+	 flex: 5;
+	 text-align:center;
+	}
+	article#word{
+	 text-align:center;
+	 position:relative;
+	}
+	 article#word>h1{
+	 font-size:2em ;
+	}
+	article#word>input{
+	 width:90%; 
+	 font-family:'zant';
+	 color:black;
+	 font-size:2.2em;
+	 text-align:center;
+	}
+	article#word p#pn{
+	 font-family:'Arial','ciclefina';
+	 color:dimgrey;
+	 font-size:2.5em;
+	 margin:0.5em auto;
+	}
+	article#word p#cn{
+	 font-family:'幼圆', '黑体';
+	 font-size:1.5em;
+	 color:rgb(150,0,0);
+	 margin:0.5em auto;
+	}
+	article#word nav{
+	 font-family:'幼圆', '黑体';
+	 font-size:1.1em;
+	 color:rgb(150,0,0);
+	 margin:auto;
+	}
+	article#word nav span{
+	margin-right:1em;
+	}
+	article#word nav span:hover{
+	 background-color:black;
+	}
+	
+	
+	
+	article#help{
+	  position:relative;
+	  background-color:darkgray;
+	  overflow:hidden;
+	   	} 
+	article#help div#backPic{
+	 position:absolute;
+	 width:100%;
+	 height:100%;
+	 left:0;top:0;
+	 z-index: 1 ; 
+	}
+	article#help div#backPic img{
+	 width:100%;
+	 /*height:100%;如果设置这条，会照成窄屏幕出现图像变形*/
+	}
+	 article#help p#textInfo{
+	  position:absolute;
+	  color:white;
+	  font-size:1.3em;
+	  text-indent:2em;
+	  left:0.2em;
+	  top:35%;
+	  text-shadow:red 2px 1px ;
+	  z-index: 2 ;
+	  padding:1%;
+	 	  }
+	article#word p#cn{
+	}
+	article#word p#cn p{
+	 font-size:0.9em;
+	 margin:0.1em auto ;
+	 border:1px solid green ;
+	
+	}
+	article#word p#cn p:hover{
+	  background-color:black;
+	 }
+	footer{
+	font-family: 'zantroke','Arial Black';
+	background-color:black;
+	color:white;
+	font-size:1.2em;
+	text-align:center;
+	height:35px;
+	padding-top:10px;
+	}
+</style>
+   <script src="https://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
+  <script src="images/words.js"></script>
+  <script src="20193007.js"></script>
+  
+ </head>
+ <body>
+  <header> 
+   <h1>
+	<span>
+		<div class="logo">
+		</div>
+	</span>
+	 <span class="title">（大学英语6级）</span>
+	</h1>
+   
+   <nav>
+    <span   id="read" class="button">读一读</span>
+    <span   id="write" class="button">写一写</span>
+    <span   id="select" class="button">选一选</span>
+    <span   id="listen" class="button">听一听</span>
+		<div class="box">
+			<input type="text" id="search_text" placeholder="输入3个以上字母的关键字">
+			<input type="button" id="search_ok" value="search" >
+		</div>
+	
+   </nav>
+  </header>
+  <section>
+    <article id = "help">
+	  
+	 <div id="backPic" >
+	 </div>
+	 <p id="textInfo">
+	 Photo from the movie of "Pride And Prejudice ",
+	 请选择上面状态按钮，进入相应学习单词的模式。
+	 </p>
+	</article>
+	<article id = "word">
+	  <h1>当前单词</h1>
+	  <input id="en" type="text" value="ability">
+	  <p id="pn">/ ə'biliti /</p>
+	  <p id="cn">n.能力；本领；才能，才干；专门技能，天资</p>
+	  <nav>
+	   <span id="ok" class="button">确认</span>
+       <span id="next" class="button">下一个</span>
+	  </nav>
+    </article>
+
+  </section>
+  <footer>
+    Code By 吴旭东 of 19计算机一班  on
+  </footer>
+ </body>
+</html>
